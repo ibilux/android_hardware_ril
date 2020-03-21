@@ -1,6 +1,7 @@
 # Copyright 2006 The Android Open Source Project
 
 ifndef ENABLE_VENDOR_RIL_SERVICE
+ifneq ($(BOARD_PROVIDES_RILD),true)
 
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
@@ -38,4 +39,5 @@ endif
 
 include $(BUILD_EXECUTABLE)
 
+endif #BOARD_PROVIDES_RILD
 endif
